@@ -34,18 +34,10 @@ out_file  = args.out_file
 dens_type = args.dens_type
 
 
-#### density either mass or electron
-assert dens_type in ["electron", "mass"]
-################################################
-
-mapping_file = open (in_file, 'r+').readlines ()
-
-
-start_reading   = False
-CG_beads_names  = set ()
-mapping_list    = []
-
-
+# dictionary of default beads like water and ions
+# 4 water molecules map to 1 bead
+# For ions, ions are modelled with their hydration shell. For now the hydration number for Na and Cl is considered. 6 for both
+#
 
 hydrogen   =  element_list["H"][dens_type]
 oxygen     =  element_list["O"][dens_type]
@@ -55,10 +47,7 @@ magnesium  =  element_list["Mg"][dens_type]
 potassium  =  element_list["K"][dens_type]
 calcium    =  element_list["Ca"][dens_type]
 
-# dictionary of default beads like water and ions
-# 4 water molecules map to 1 bead
-# For ions, ions are modelled with their hydration shell. For now the hydration number for Na and Cl is considered. 6 for both
-#
+
 default_beads = dict (W=4*(oxygen+2*hydrogen), 
                            WF=4*(oxygen+2*hydrogen),
                            NA = sodium + 6*(oxygen+2*oxygen),
@@ -68,7 +57,14 @@ default_beads = dict (W=4*(oxygen+2*hydrogen),
                            CA = calcium)
 
 
- 
+#### density either mass or electron
+assert dens_type in ["electron", "mass"]
+################################################
+mapping_file = open (in_file, 'r+').readlines ()
+
+start_reading   = False
+CG_beads_names  = set ()
+mapping_list    = [] 
 
 for index, line in enumerate (mapping_file):
     
