@@ -5,6 +5,15 @@ import numpy as np
 import json
 import argparse
 
+parser = argparse.ArgumentParser(description="Assign electron/mass to Martini beads by reading mapping file")
+parser.add_argument('-m', dest='mapping_file', type=str, default='Martini mapping file',help='mapping file')
+parser.add_argument('-o', dest='out_file', type=str, default='cg_electron.dat',help='output file')
+parser.add_argument('-dens', dest='dens_type', type=str, default='electron',help='density type electron or mass')
+  
+args      = parser.parse_args()
+in_file   = args.mapping_file
+out_file  = args.out_file
+dens_type = args.dens_type
  
 element_list = {
     # Major biomolecule atoms
@@ -22,17 +31,6 @@ element_list = {
     "Mg": {"name": "Magnesium",   "electron": 12, "mass": 24.305},
     "Cl": {"name": "Chlorine",    "electron": 17, "mass": 35.45}
 }
-
-parser = argparse.ArgumentParser(description="Assign electron/mass to Martini beads by reading mapping file")
-parser.add_argument('-m', dest='mapping_file', type=str, default='Martini mapping file',help='mapping file')
-parser.add_argument('-o', dest='out_file', type=str, default='cg_electron.dat',help='output file')
-parser.add_argument('-dens', dest='dens_type', type=str, default='electron',help='density type electron or mass')
-  
-args      = parser.parse_args()
-in_file   = args.mapping_file
-out_file  = args.out_file
-dens_type = args.dens_type
-
 
 # dictionary of default beads like water and ions
 # 4 water molecules map to 1 bead
