@@ -77,8 +77,8 @@ for index, line in enumerate (mapping_file):
     if start_reading:
         
         if "[" in line: break # Here the next section with other information starts so we stop here
-        
-        stripped = line.strip ().split ()
+
+        stripped = line.split (";") [0].strip ().split ()
         
         try:
             atom_index = int (stripped[0]) # The first element is an integer and is the index of atom
