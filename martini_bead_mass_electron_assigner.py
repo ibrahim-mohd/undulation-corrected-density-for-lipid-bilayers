@@ -16,7 +16,7 @@ out_file  = args.out_file
 dens_type = args.dens_type
  
 element_list = {
-    # Major biomolecule atoms
+    # Most atoms in protein/lipid and nucleic acids
     # if required you can simply add more atoms here
     "H":  {"name": "Hydrogen",    "electron": 1,  "mass": 1.008},
     "C":  {"name": "Carbon",      "electron": 6,  "mass": 12.011},
@@ -24,7 +24,7 @@ element_list = {
     "O":  {"name": "Oxygen",      "electron": 8,  "mass": 15.999},
     "P":  {"name": "Phosphorus",  "electron": 15, "mass": 30.974},
     "S":  {"name": "Sulfur",      "electron": 16, "mass": 32.06},
-    # Essential minerals 
+    # Common ions 
     "Na": {"name": "Sodium",      "electron": 11, "mass": 22.990},
     "K":  {"name": "Potassium",   "electron": 19, "mass": 39.098},
     "Ca": {"name": "Calcium",     "electron": 20, "mass": 40.078},
