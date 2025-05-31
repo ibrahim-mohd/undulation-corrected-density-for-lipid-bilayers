@@ -115,7 +115,7 @@ for line in mapping_list:
 
 total_number_of_electron_assigned = int (np.round (sum (Bead_electron[molecule_name].values ())))
 
-## Write a json file just for the maping file molecule
+## Write a json output file
 Bead_electron ["SOL"] = default_beads
 with open(out_file.split (".")[0]+".json", "w") as f:
     json.dump(Bead_electron, f, indent=4)
