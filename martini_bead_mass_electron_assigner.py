@@ -4,7 +4,6 @@
 import numpy as np
 import json
 import argparse
-import warnings
 
  
 element_list = {
@@ -23,10 +22,6 @@ element_list = {
     "Mg": {"name": "Magnesium",   "electron": 12, "mass": 24.305},
     "Cl": {"name": "Chlorine",    "electron": 17, "mass": 35.45}
 }
-
-# Suppress specific warnings from MDAnalysis
-warnings.filterwarnings("ignore")#, category=UserWarning, module="MDAnalysis.coordinates.PDB")
-
 
 parser = argparse.ArgumentParser(description="Assign electron/mass to Martini beads by reading mapping file")
 parser.add_argument('-m', dest='mapping_file', type=str, default='Martini mapping file',help='mapping file')
