@@ -2,7 +2,7 @@
 The script does undulation correction for density profile for  large lipid bilayers.
 
 # How is mass or electron assigned to CG-Martini beads
-The script `martini_bead_mass_electron_assigner.py` read the Martini mapping file for a given molecule. A section of which for `DOPC` is shown in the following Table
+The script `martini_bead_mass_electron_assigner.py` reads the Martini mapping file for a given molecule. A section of mapping file for `DOPC` is shown in the following Table
 | **Index** | **Atoms** | **CG-Beads**               |
 |-----------|-----------|----------------------------|
 | 1         | N         | NC3                        |
