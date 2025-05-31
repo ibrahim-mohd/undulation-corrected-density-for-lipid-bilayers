@@ -3,3 +3,25 @@ The script does undulation correction for density profile for  large lipid bilay
 
 # How is mass or electron assigned to CG-Martini beads
 
+| **Index** | **Atoms** | **CG-Beads**               |
+|-----------|-----------|----------------------------|
+| 1         | N         | NC3                        |
+| 2         | C12       | NC3 NC3 NC3 PO4            |
+| 3         | C13       | NC3                        |
+| 4         | C14       | NC3                        |
+| 5         | C15       | NC3                        |
+| 6         | H12A      | NC3 NC3 NC3 PO4            |
+| 7         | H12B      | NC3 NC3 NC3 PO4            |
+| …         | …         | …                          |
+
+> **Table:** An example Martini mapping file. This portion is from the DOPC mapping file. Source: [Martini Mapping Files](https://cgmartini.nl/docs/downloads/force-field-parameters/martini2/lipidome.html)
+
+---
+
+Based on the mapping file (Table above), the $b_i$ for CG-bead **NC3** is assigned as:
+
+$$
+b_i (\mathrm{NC3}) = b_i (\mathrm{N}) + \frac{3 b_i (\mathrm{C})}{4} + 3b_i (\mathrm{C}) + \frac{3b_i (\mathrm{H})}{4} + \frac{3b_i (\mathrm{H})}{4} + \dots
+$$
+
+Where $b_i (X)$ is the scattering factor of atom $X$.
