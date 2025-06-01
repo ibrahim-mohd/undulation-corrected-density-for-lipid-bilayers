@@ -14,7 +14,9 @@ args      = parser.parse_args()
 in_file   = args.mapping_file
 out_file  = args.out_file
 dens_type = args.dens_type
- 
+#### density either mass or electron
+assert dens_type in ["electron", "mass"]
+
 element_list = {
     # Most atoms in protein/lipid and nucleic acids
     # if required you can simply add more atoms here
@@ -54,9 +56,6 @@ default_beads = dict (W=4*(oxygen+2*hydrogen),
                            K  = potassium,
                            CA = calcium)
 
-
-#### density either mass or electron
-assert dens_type in ["electron", "mass"]
 ################################################
 mapping_file = open (in_file, 'r+').readlines ()
 
