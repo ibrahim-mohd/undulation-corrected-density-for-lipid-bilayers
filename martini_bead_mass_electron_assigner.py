@@ -6,7 +6,7 @@ import json
 import argparse
 
 parser = argparse.ArgumentParser(description="Assign electron/mass to Martini beads by reading mapping file")
-parser.add_argument('-m', dest='mapping_file', type=str, default='Martini mapping file',help='mapping file')
+parser.add_argument('-m', dest='mapping_file', type=str, default='./Mapping/dopc.charmm36.map',help='Martini mapping file')
 parser.add_argument('-o', dest='out_file', type=str, default='cg_electron.dat',help='output file')
 parser.add_argument('-dens', dest='dens_type', type=str, default='electron',help='density type electron or mass')
   
