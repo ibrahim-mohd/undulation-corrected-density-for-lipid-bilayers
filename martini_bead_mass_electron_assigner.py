@@ -126,7 +126,7 @@ number_of_cg_beads =  len(Bead_electron [molecule_name]) + len (default_beads)
 with open(out_file, "w") as f:
     f.write (f"{number_of_cg_beads}\n")
     
-    for key, value in Bead_electron[molecule_name].items(): f.write (f"{key}={value}\n")
+    for key, value in Bead_electron[molecule_name].items(): f.write (f"{key} = {value}\n")
 
     for key, value in default_beads.items(): f.write (f"{key}={value}\n")
    
