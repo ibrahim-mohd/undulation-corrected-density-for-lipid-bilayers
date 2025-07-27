@@ -128,7 +128,7 @@ with open(out_file, "w") as f:
     
     for key, value in Bead_electron[molecule_name].items(): f.write (f"{key} = {value}\n")
 
-    for key, value in default_beads.items(): f.write (f"{key}={value}\n")
+    for key, value in default_beads.items(): f.write (f"{key} = {value}\n")
    
      
 print (f"Total number of atoms in {molecule_name}: {len(mapping_list)}")
