@@ -29,4 +29,4 @@ The `Mapping` directory is part of this repository obtained from the Martini web
 ```bash
       martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
 ```
-  
+  The number of Fourier term (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. You can find optimum values for your system by trying around or follow the paper for procedure. 
