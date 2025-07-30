@@ -23,3 +23,10 @@ There are two scripts that need to be run one after the other:
 
 The `Mapping` directory is part of this repository obtained from the Martini website (backward tutorial zip file). ```-dens``` can be ``electron``, ``mass`` or ``neutron``
  
+
+2. The script `martini_membrane_uc_density.py` takes as input the ``.json`` output from above,``.tpr``, ``.xtc`` and calculates the undulated corrected or regular density profiles.
+
+```bash
+      martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
+```
+  
