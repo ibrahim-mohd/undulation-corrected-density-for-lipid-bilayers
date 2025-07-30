@@ -15,7 +15,7 @@ MDAnalysis (v-2.9.0), periodictable (v-2.0.2). Other version may work too
 # 2. Martini Coarse-grained Membrane
 There are two scripts that need to be run one after the other:  
 
-1. The script `martini_bead_electron_mass_assigner.py` reads a `.gro` or `.pdb` file of the full system and, using the `Mapping` directory, assigns electron/mass/neutron scattering factors for each bead and creates a `.json` file.
+1. **Assign electron/mass/neutron** to Martini beads using  `martini_bead_electron_mass_assigner.py`.
 
 ```bash
        python martini_bead_electron_mass_assigner.py -m ./Mapping -c gro_file -o cg_bead_prop.json -dens electron
@@ -24,8 +24,7 @@ There are two scripts that need to be run one after the other:
 The `Mapping` directory is part of this repository obtained from the Martini website (backward tutorial zip file). ```-dens``` can be ``electron``, ``mass`` or ``neutron``
  
 
-2. The script `martini_membrane_uc_density.py` takes as input the ``.json`` output from above,``.tpr``, ``.xtc`` and calculates the undulated corrected or regular density profiles.
-
+2. Obtain **undulation corrected/regular density** using `martini_membrane_uc_density.py`
 ```bash
       martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
 ```
