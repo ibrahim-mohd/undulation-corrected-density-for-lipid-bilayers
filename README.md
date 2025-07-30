@@ -16,7 +16,6 @@ There are two scripts that need to be run one after the other:
 
 1. The script `martini_bead_electron_mass_assigner.py` reads a `.gro` or `.pdb` file of the full system and, using the `Mapping` directory, assigns electron/mass/neutron scattering factors for each bead and creates a `.json` file.
 
-
 ```bash
 python martini_bead_electron_mass_assigner.py -f system.gro -o output.json
-``
+ 
