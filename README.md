@@ -19,4 +19,6 @@ There are two scripts that need to be run one after the other:
 
 ```bash
        python martini_bead_electron_mass_assigner.py -m ./Mapping -c gro_file -o cg_bead_prop.json -dens electron
+
+The `Mapping` directory is part of the repository obtained from the martini website. -dens can be ``electron``, ``mass`` or ``neutron``
  
