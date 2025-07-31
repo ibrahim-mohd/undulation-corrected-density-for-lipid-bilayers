@@ -18,7 +18,7 @@ There are two scripts that need to be run one after the other:
 1. **Assign electron/mass/neutron** to Martini beads using  `martini_bead_electron_mass_assigner.py`.
 
 ```bash
-       python martini_bead_electron_mass_assigner.py -m ./Mapping -c gro_file -o cg_bead_prop.json -dens electron
+python martini_bead_electron_mass_assigner.py -m ./Mapping -c gro_file -o cg_bead_prop.json -dens electron
 ```
 
 The `Mapping` directory is part of this repository obtained from the Martini website (backward tutorial zip file). ```-dens``` can be ``electron``, ``mass`` or ``neutron``
@@ -26,13 +26,13 @@ The `Mapping` directory is part of this repository obtained from the Martini web
 
 2. Obtain **undulation corrected/regular density** using `martini_membrane_uc_density.py`
 ```bash
-      python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
+python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
 ```
   The number of Fourier terms (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. You can find optimum values for your system by trying around or follow the paper for a procedure. 
 
 # 3. All-atom Membrane Simulations: Undulation corrected density
 For all atoms system  to obtain **undulation corrected/regular density** only the `all_atom_membrane_uc_density.py` as:
 ```bash
-      python all_atom_membrane_uc_density.py.py -f mol.xtc -s npt.tpr -uc 1 -o output_file
+python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_file
 ```
   The number of Fourier terms (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. You can find optimum values for your system by trying around or follow the paper for a procedure. The default number of fourier term is N=4 which acutally means 4*2=8 terms. More than 4 terms just makes the code slower without any significant improvement in the calculations.
