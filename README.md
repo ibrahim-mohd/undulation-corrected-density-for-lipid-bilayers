@@ -12,7 +12,7 @@ The scripts here calculate **Undulation Corrected** transverse **electron densit
 &nbsp;&nbsp;&nbsp;&nbsp;4. The scripts here take care of all the above for both **CG‑Martini** and **All‑atom** lipid bilayer systems, with and without other biomolecules.  
 ## Dependencies
 MDAnalysis (v-2.9.0), periodictable (v-2.0.2). Other version may work too
-# 2. Martini Coarse-grained Membrane Simulations: Undulation corrected density
+# 2. Martini Coarse-grained Membrane Simulations: undulation corrected density
 There are two scripts that need to be run one after the other:  
 
 1. **Assign electron/mass/neutron** to Martini beads using  `martini_bead_electron_mass_assigner.py`.
@@ -30,7 +30,7 @@ python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json 
 ```
   The number of Fourier terms (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. You can find optimum values for your system by trying around or follow the paper for a procedure. 
 
-# 3. All-atom Membrane Simulations: Undulation corrected density
+# 3. All-atom Membrane Simulations: undulation corrected density
 For all atoms system  to obtain **undulation corrected/regular density** only the `all_atom_membrane_uc_density.py` as:
 ```bash
 python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_file
