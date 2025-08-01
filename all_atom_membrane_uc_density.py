@@ -119,7 +119,7 @@ def get_different_monolayers (u, group):
     # z-coordinate. We use those atoms to seperate the leaftlet
     # to be sure we try both the highest z and lowest z and later on pick the atom which gives
     # most symmetric difference between the two. In most cases bothh should give same results
-        res_ids          = " ".join (str (x) for x in u.select_atoms (f"name {group}").residues.resids)
+    res_ids          = " ".join (str (x) for x in u.select_atoms (f"name {group}").residues.resids)
     sel_top          = u.select_atoms(f"resid {res_ids} and not name H* 1H* 2H*")
     
     atom_name_min    =  sel_top.names [np.argmin (sel_top.positions [:,2])]
