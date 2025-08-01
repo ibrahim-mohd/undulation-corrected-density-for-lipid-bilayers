@@ -53,5 +53,5 @@ For the undulation correction choosing proper $q_0$ is critcal. If its too high,
 Figure 2: <em> Spectral intensity for pure DPPC bilayer from CG-Martini simulations. At low frequency, the undulations scale as $q^{-4}$, these corresponds to actual undulations regimes. At high-$q$, the intensity starts increaing again, this regime has to be filtered out. (A) without filter (B) after applying filter from Braun et al.</em>
 
 # 5. References
-If you find this thing useful please cite our work:
+If you find this thing useful please cite our work: coming soon...
 ...
