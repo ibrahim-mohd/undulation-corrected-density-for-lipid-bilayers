@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser (description="This code calculates transverse mass or electron or neutron scattering lenght density profiles for membrane or membrane/protein/nucleic acids system from all-atom MD simulations. It also perform undulation correction for comparison with expeirments especially ")
 
-################ For creating index files of pocket residues ###########################################
+################  ###########################################
 
 parser.add_argument('-f', dest='xtc_file', type=str, default='all.xtc',help='xtc file')
 parser.add_argument('-s', dest='tpr_file', type=str, default='em.tpr',help='input tpr file')
