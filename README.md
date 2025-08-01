@@ -1,6 +1,7 @@
 # 1. Introduction
-The scripts here calculate **Undulation Corrected** transverse **electron density**, **mass density**, or **neutron scattering length density (SLD)** for lipid membranes or lipid membranes with different biomolecules like proteins or nucleic acids.  
-
+The scripts here calculate **Undulation Corrected** transverse **electron density**, **mass density**, or **neutron scattering length density (SLD)** for lipid membranes or lipid membranes with different biomolecules like proteins or nucleic acids. The undulation correction procedure is performed by using the method form Braun et al. *Braun, A.R., Brandt, E.G., Edholm, O., Nagle, J.F. and Sachs, J.N., 2011. Determination of electron density profiles and area from simulations of undulating membranes. Biophysical journal, 100(9), pp.2112-2120*.
+## References:
+1. If you find the things here use full please cite our paper:
 ## 1.1 Why
 
 &nbsp;&nbsp;&nbsp;&nbsp;1. Transverse electron or neutron SLD are among the most important structural quantities for lipid bilayers. The scattering form factor obtained by Fourier transform of these quantities or reflectivity profiles can be directly compared with experiments to validate the forcefield predictions.  
