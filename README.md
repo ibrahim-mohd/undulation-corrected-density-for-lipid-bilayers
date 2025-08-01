@@ -45,7 +45,7 @@ python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_fil
 Figure 1: <em> (A) Electron density of pure DPPC bilayer from CG-Martini simulations. There is no undulation smearing for a small bilayer with $N_{lip}=100$ lipids/monolayer. For $N_{lip}=1000$, undulations smear out the electron density. After undulation correction we recover the electron density that is closer to $N{lip}=100$ (B) These profiles are obtained from all-atom projected of Martini DOPC/tRNA system therefore usign the all-atom undulation correction script.</em> 
 
 
-# 4. Determination the threshold wavevector ($q_0$) 
+# 4. Determination of the threshold wavevector ($q_0$) 
 For the undulation correction choosing proper $q_0$ is critcal. If its too high, we are correcting for thermal motion and if two low we omit the acutal inherant undulations. To obtain the optimum we follow the procedure by Braun et al., where we obtain the **spectral intensity** by scanning a relatively large $q-$ space i.e $N>=50$ or so. For membranes, the spectral intesity of actual unduation scales as $q^{-4}$, so we choose the $q_0$ where the behaviour deviates from this scaling. In most case of DOPC and DPPC for both all-atom and martini, the default value i found i.e $q_0 \sim 0.04~Å^{-1}$ works well. To explore the spectral intensity behaviour for different sytems, you can use the provide notebooke `obtain_threshold_wave_vector.ipynb`.
 
 <img src="/Figures/dppc_1000_spectrum.png" width="1000"> 
