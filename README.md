@@ -40,7 +40,7 @@ python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_fil
 
 <img src="/Figures/dppc_dopc_edens.png" width="1000"> 
 
-Figure 1: <em>&alpha;-cristobalite Unitcell </em>
+Figure 1: <em> (A) Electron density of pure DPPC bilayer from CG-Martini simulations. There is no undulation smearing for a small bilayer with $N_{lip}=$100 lipids/monolayer. For $N_{lip}=1000$, undulations smear out the electron density. After undulation correction we recover the electron density that is closer to $N{lip}-=100$ (B) These profiles are obtained from all-atom projected of Martini DOPC/tRNA system therefore usign the all-atom undulation correction script.</em> 
 
 
 # 4. Determination the threshold wavevector ($q_0$) 
