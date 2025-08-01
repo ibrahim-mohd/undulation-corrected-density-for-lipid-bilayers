@@ -26,14 +26,14 @@ The `Mapping` directory is part of this repository obtained from the Martini web
 
 2. Obtain **undulation corrected/regular density** using `martini_membrane_uc_density.py`
 ```bash
-python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
+python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file -q0 0.04 -N 4 -group "C3A"
 ```
   The number of Fourier terms (-N), wave vector threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values.
 
 # 3. All-atom Membrane Simulations: undulation corrected density
 For all atoms system  to obtain **undulation corrected/regular density** only the `all_atom_membrane_uc_density.py` as:
 ```bash
-python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_file
+python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_file -q0 0.04 -N 4 -group "C114"
 ```
   The number of Fourier terms (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. The default number of fourier term is N=4 which acutally means 4*2=8 terms. More than 4 terms just makes the code slower without any significant improvement in the calculations.
 
