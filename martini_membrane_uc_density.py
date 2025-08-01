@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser (description="This code calculates transverse mass or electron density profiles for martini membrane or membrane/protein/nucleic acids system. It also perform undulation correction for comparison with expeirments especially form factors")
 
-################ For creating index files of pocket residues ###########################################
+#########################################################
 
 parser.add_argument('-f', dest='xtc_file', type=str, default='all.xtc',help='xtc file')
 parser.add_argument('-s', dest='tpr_file', type=str, default='em.tpr',help='input tpr file')
