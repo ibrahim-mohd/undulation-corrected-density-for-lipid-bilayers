@@ -12,7 +12,7 @@ The scripts here calculate **Undulation Corrected** transverse **electron densit
 &nbsp;&nbsp;&nbsp;&nbsp;3. When simulating large membrane patches (>500 lipids per monolayer), the inherent undulations smear out the transverse density profiles. To make direct comparisons with experiments, those undulations need to be corrected.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;4. The scripts here take care of all the above for both **CG‑Martini** and **All‑atom** lipid bilayer systems, with and without other biomolecules.  
-## Dependencies
+## 1.2 Dependencies
 MDAnalysis (v-2.9.0), periodictable (v-2.0.2). Other version may work too
 # 2. Martini Coarse-grained Membrane Simulations: undulation corrected density
 There are two scripts that need to be run one after the other:  
