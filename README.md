@@ -33,7 +33,7 @@ python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json 
   The number of Fourier terms (-N), wave vector threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values.
 
 # 3. All-atom Membrane Simulations: undulation corrected density
-For all atoms system  to obtain **undulation corrected/regular density** only the `all_atom_membrane_uc_density.py` as:
+For all atoms system  to obtain **undulation corrected/regular density** only the `all_atom_membrane_uc_density.py` needs to be run as:
 ```bash
 python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_file -q0 0.04 -N 4 -group "C114"
 ```
