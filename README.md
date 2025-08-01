@@ -28,7 +28,7 @@ The `Mapping` directory is part of this repository obtained from the Martini web
 ```bash
 python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file
 ```
-  The number of Fourier terms (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. You can find optimum values for your system by trying around or follow the paper for a procedure. 
+  The number of Fourier terms (-N), wave vector threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values.
 
 # 3. All-atom Membrane Simulations: undulation corrected density
 For all atoms system  to obtain **undulation corrected/regular density** only the `all_atom_membrane_uc_density.py` as:
