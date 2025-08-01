@@ -36,3 +36,5 @@ For all atoms system  to obtain **undulation corrected/regular density** only th
 python all_atom_membrane_uc_density.py -f mol.xtc -s npt.tpr -uc 1 -o output_file
 ```
   The number of Fourier terms (-N), filter threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values. The default number of fourier term is N=4 which acutally means 4*2=8 terms. More than 4 terms just makes the code slower without any significant improvement in the calculations.
+
+# 4. Determine the threshold wavevector ($q_0$) 
