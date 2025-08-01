@@ -1,3 +1,5 @@
+#author: Mohd Ibrahim, Technical University of Munich
+# email: ibrahim.mohd@tum.de
 import argparse
 import json
 import pickle
