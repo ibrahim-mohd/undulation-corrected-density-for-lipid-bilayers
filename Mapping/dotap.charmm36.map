@@ -1,0 +1,200 @@
+; Mapping file created 20160527 by pbuslaev
+ ; typo fixed 20170809 by jbarnoud
+ 
+ [ molecule ]
+ DOTAP
+ 
+ [ martini ]
+ NC3 GL1 GL2 C1A D2A C3A C4A C1B D2B C3B C4B
+ ;
+ ; NC3-GL1-C1A-D2A-C3A-C4A
+ ;         |
+ ;         GL2-C1B-D2B-C3B-C4B
+ 
+ [ mapping ]
+ charmm27 charmm36
+ 
+ [ atoms ]
+ ; Terminal head group (choline)
+     1     N31   NC3
+     2   C32   NC3 
+     3   C33   NC3
+     4   C34   NC3
+     5   C35   NC3
+     6  H2A   NC3 
+     7  H2B   NC3 
+     8  H3A   NC3
+     9  H3B   NC3
+    10  H3C   NC3
+    11  H4A   NC3
+    12  H4B   NC3
+    13  H4C   NC3
+    14  H5A   NC3
+    15  H5B   NC3
+    16  H5C   NC3
+    17    C2   GL1 GL1 GL2
+    18    HX   GL1 GL1 GL2
+    19   O21   GL1 GL1 GL2 C1A
+    20   C21   GL1 C1A
+    21   O22   GL1
+    22   C12X   C1A C1A GL1 
+    23   H2RX   C1A C1A GL1
+    24   H2SX   C1A C1A GL1
+    25    C1   GL2 GL2 GL2
+    26    HR   GL2 GL2 GL2
+    27    HS   GL2 GL2 GL2
+    28   O11   GL2
+    29   C11   GL2 GL1 C1B
+    30   O12   GL2
+    31   C12   C1B C1B GL2
+    32   H2R   C1B C1B GL2
+    33   H2S   C1B C1B GL2
+    34   C13X   C1A
+    35   H3RX   
+    36   H3SX   
+    37   C14X   C1A C1A C1A D2A
+    38   H4RX   
+    39   H4SX   
+    40   C15X   C1A D2A
+    41   H5RX   
+    42   H5SX   
+    43   C16X   D2A D2A D2A C1A
+    44   H6RX   
+    45   H6SX   
+    46   C17X   D2A
+    47   H7RX   
+    48   H7SX   
+    49   C18X   D2A D2A D2A C3A
+    50   H8RX   
+    51   H8SX   
+    52   C19X   D2A D2A C3A
+    53   H9RX   D2A C3A
+    54  C110X   C3A C3A D2A
+    55  H10RX   D2A C3A
+    56  C111X   C3A C3A C3A D2A
+    57  H11RX   
+    58  H11SX   
+    59  C112X   C3A
+    60  H12RX   
+    61  H12SX   
+    62  C113X   C3A C3A C3A C4A
+    63  H13RX   
+    64  H13SX   
+    65  C114X   C3A C4A
+    66  H14RX   
+    67  H14SX   
+    68  C115X   C4A C4A C4A C3A
+    69  H15RX   
+    70  H15SX   
+    71  C116X   C4A
+    72  H16RX   
+    73  H16SX   
+    74  C117X   C4A
+    75  H17RX   
+    76  H17SX   
+    77  C118X   C4A
+    78  H18RX   
+    79  H18SX   
+    80  H18TX   
+    81   C13   C1B
+    82   H3R   
+    83   H3S   
+    84   C14   C1B C1B C1B D2B
+    85   H4R   
+    86   H4S   
+    87   C15   C1B D2B
+    88   H5R   
+   89   H5S   
+   90   C16   D2B D2B D2B C1B
+   91   H6R   
+   92   H6S   
+   93   C17   D2B 
+   94   H7R   
+   95   H7S   
+   96   C18   D2B D2B D2B C3B
+   97   H8R   
+   98   H8S   
+   99   C19   D2B D2B C3B
+   100   H9R   D2B C3B
+   101  C110   C3B C3B D2B 
+   102  H10R   D2B C3B
+   103  C111   C3B C3B C3B D2B
+   104  H11R   
+   105  H11S   
+   106  C112   C3B
+   107  H12R   
+   108  H12S   
+   109  C113   C3B C3B C3B C4B
+   110  H13R   
+   111  H13S   
+   112  C114   C3B C4B
+   113  H14R   
+   114  H14S   
+   115  C115   C4B C4B C4B C3B
+   116  H15R   
+   117  H15S   
+   118  C116   C4B
+   119  H16R   
+   120  H16S
+   121  C117   C4B
+   122  H17R   
+   123  H17S   
+   124  C118   C4B
+   125  H18R   
+   126  H18S   
+   127  H18T   
+ 
+ 
+ ;making R stereoisomer- placing HX
+ [chiral]
+ HX C2 O21 C1
+ 
+ ; acyl esters
+ [trans]
+ C12X C21 O21 C2
+ [ out ]
+ O22 C21 O21 C12X
+ [trans]
+ C12 C11 O11 C1
+ [out]
+ O12 C11 O11 C12
+ 
+ ;;;making a choline group
+ [out]
+ C34 N31 C33 C32
+ H4A N31 C33 C32
+ H4B N31 C33 C32
+ H4C N31 C33 C32
+ 
+ [ chiral ]
+ C35 N31 C32 C33 C34
+ H5A N31 C32 C33 C34
+ H5B N31 C32 C33 C34
+ H5C N31 C32 C33 C34
+ 
+ ;cis bonds in lipid chains
+ [ out ]
+ H7RX C17X C16X C18X
+ H7SX C17X C16X C18X
+ C18X C17X C16X H7RX
+ [ trans ]
+ C19X C18X C17X C16X
+ C110X C19X C18X C17X
+ H10RX C110X C19X C18X
+ [ out ]
+ C111X C110X H10RX C19X
+ H9RX C19X C110X C18X
+ 
+ [ out ]
+ H7R C17 C16 C18
+ H7S C17 C16 C18
+ C18 C17 C16 H7R
+ [ trans ]
+ C19 C18 C17 C16
+ C110 C19 C18 C17
+ H10R C110 C19 C18
+ [ out ]
+ C111 C110 H10R C19
+ H9R C19 C110 C18
+ 
+ 

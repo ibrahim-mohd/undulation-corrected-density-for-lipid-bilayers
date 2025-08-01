@@ -1,0 +1,213 @@
+; Mapping file created 20160527 by pbuslaev
+ ; typo fixed 20170809 by jbarnoud
+ 
+ [ molecule ]
+ DOPC
+ 
+ [ martini ]
+ NC3 PO4 GL1 GL2 C1A D2A C3A C4A C1B D2B C3B C4B
+ ;
+ ; NC3-PO4-GL1-C1A-D2A-C3A-C4A
+ ;         |
+ ;         GL2-C1B-D2B-C3B-C4B
+ 
+ [ mapping ]
+ charmm27 charmm36
+ 
+ [ atoms ]
+ ; Terminal head group (choline)
+     1     N31   NC3
+     2   C32   NC3 NC3 NC3 PO4
+     3   C33   NC3
+     4   C34   NC3
+     5   C35   NC3
+     6  H2A   NC3 NC3 NC3 PO4
+     7  H2B   NC3 NC3 NC3 PO4
+     8  H3A   NC3
+     9  H3B   NC3
+    10  H3C   NC3
+    11  H4A   NC3
+    12  H4B   NC3
+    13  H4C   NC3
+    14  H5A   NC3
+    15  H5B   NC3
+    16  H5C   NC3
+    17   C31   NC3 PO4
+    18  H1A   NC3 PO4
+    19  H1B   NC3 PO4
+ ; Phosphate group
+    20     P31   PO4
+    21   O33   PO4
+    22   O34   PO4
+    23   O32   PO4 PO4 PO4 NC3
+    24   O31   PO4 PO4 GL1
+ ; Diacylglycerol
+    25    C3   GL1 GL1 PO4
+    26    HA   GL1 GL1 PO4
+    27    HB   GL1 GL1 PO4
+    28    C2   GL1 GL1 GL2
+    29    HX   GL1 GL1 GL2
+    30   O21   GL1 GL1 GL2 C1A
+    31   C21   GL1 C1A
+    32   O22   GL1
+    33   C12X   C1A C1A GL1 
+    34   H2RX   C1A C1A GL1
+    35   H2SX   C1A C1A GL1
+    36    C1   GL2 GL2 GL2 PO4
+    37    HR   GL2 GL2 GL2 PO4
+    38    HS   GL2 GL2 GL2 PO4
+    39   O11   GL2
+    40   C11   GL2 GL1 C1B
+    41   O12   GL2
+    42   C12   C1B C1B GL2
+    43   H2R   C1B C1B GL2
+    44   H2S   C1B C1B GL2
+ ; First tail
+    45   C13X   C1A
+    46   H3RX   
+    47   H3SX   
+    48   C14X   C1A C1A C1A D2A
+    49   H4RX   
+    50   H4SX   
+    51   C15X   C1A D2A
+    52   H5RX   
+    53   H5SX   
+    54   C16X   D2A D2A D2A C1A
+    55   H6RX   
+    56   H6SX   
+    57   C17X   D2A
+    58   H7RX   
+    59   H7SX   
+    60   C18X   D2A D2A D2A C3A
+    61   H8RX   
+    62   H8SX   
+    63   C19X   D2A D2A C3A
+    64   H9RX   D2A C3A
+    65  C110X   C3A C3A D2A
+    66  H10RX   D2A C3A
+    67  C111X   C3A C3A C3A D2A
+    68  H11RX   
+    69  H11SX   
+    70  C112X   C3A
+    71  H12RX   
+    72  H12SX   
+    73  C113X   C3A C3A C3A C4A
+    74  H13RX   
+    75  H13SX   
+    76  C114X   C3A C4A
+    77  H14RX   
+    78  H14SX   
+    79  C115X   C4A C4A C4A C3A
+    80  H15RX   
+    81  H15SX   
+    82  C116X   C4A
+    83  H16RX   
+    84  H16SX   
+    85  C117X   C4A
+    86  H17RX   
+    87  H17SX   
+    88  C118X   C4A
+    89  H18RX   
+    90  H18SX   
+    91  H18TX   
+ ; Other tail
+    92   C13   C1B
+    93   H3R   
+    94   H3S   
+    95   C14   C1B C1B C1B D2B
+    96   H4R   
+    97   H4S   
+    98   C15   C1B D2B
+    99   H5R   
+   100   H5S   
+   101   C16   D2B D2B D2B C1B
+   102   H6R   
+   103   H6S   
+   104   C17   D2B 
+   105   H7R   
+   106   H7S   
+   107   C18   D2B D2B D2B C3B
+   108   H8R   
+   109   H8S   
+   110   C19   D2B D2B C3B
+   111   H9R   D2B C3B
+   112  C110   C3B C3B D2B 
+   113  H10R   D2B C3B
+   114  C111   C3B C3B C3B D2B
+   115  H11R   
+   116  H11S   
+   117  C112   C3B
+   118  H12R   
+   119  H12S   
+   120  C113   C3B C3B C3B C4B
+   121  H13R   
+   122  H13S   
+   123  C114   C3B C4B
+   124  H14R   
+   125  H14S   
+   126  C115   C4B C4B C4B C3B
+   127  H15R   
+   128  H15S   
+   129  C116   C4B
+   130  H16R   
+   131  H16S
+   132  C117   C4B
+   133  H17R   
+   134  H17S   
+   135  C118   C4B
+   136  H18R   
+   137  H18S   
+   138  H18T   
+ 
+ ;making R stereoisomer- placing HX
+ [chiral]
+ HX C2 O21 C3 C1
+ 
+ ; acyl esters
+ [trans]
+ C12X C21 O21 C2
+ [ out ]
+ O22 C21 O21 C12X
+ [trans]
+ C12 C11 O11 C1
+ [out]
+ O12 C11 O11 C12
+ 
+ ;;;making a choline group
+ [out]
+ C34 N31 C33 C32
+ H4A N31 C33 C32
+ H4B N31 C33 C32
+ H4C N31 C33 C32
+ 
+ [ chiral ]
+ C35 N31 C32 C33 C34
+ H5A N31 C32 C33 C34
+ H5B N31 C32 C33 C34
+ H5C N31 C32 C33 C34
+ 
+ ;cis bonds in lipid chains
+ [ out ]
+ H7RX C17X C16X C18X
+ H7SX C17X C16X C18X
+ C18X C17X C16X H7RX
+ [ trans ]
+ C19X C18X C17X C16X
+ C110X C19X C18X C17X
+ H10RX C110X C19X C18X
+ [ out ]
+ C111X C110X H10RX C19X
+ H9RX C19X C110X C18X
+ 
+ [ out ]
+ H7R C17 C16 C18
+ H7S C17 C16 C18
+ C18 C17 C16 H7R
+ [ trans ]
+ C19 C18 C17 C16
+ C110 C19 C18 C17
+ H10R C110 C19 C18
+ [ out ]
+ C111 C110 H10R C19
+ H9R C19 C110 C18
+ 
