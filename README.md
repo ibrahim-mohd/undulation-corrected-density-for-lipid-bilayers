@@ -46,7 +46,7 @@ Figure 1: <em> (A) Electron density of pure DPPC bilayer from CG-Martini simulat
 
 
 # 4. Determination of the threshold wavevector ($q_0$) 
-For the undulation correction choosing proper $q_0$ is critcal. If its too high, we are correcting for thermal motion and if two low we omit the acutal inherant undulations. To obtain the optimum we follow the procedure by Braun et al., where we obtain the **spectral intensity** by scanning a relatively large $q-$ space i.e $N>=50$ or so. For membranes, the spectral intesity of actual unduation scales as $q^{-4}$, so we choose the $q_0$ where the behaviour deviates from this scaling. In most case of DOPC and DPPC for both all-atom and martini, the default value i found i.e $q_0 \sim 0.04~Å^{-1}$ works well. To explore the spectral intensity behaviour for different sytems, you can use the provide notebooke `obtain_threshold_wave_vector.ipynb`.
+For the undulation correction choosing proper $q_0$ is critcal. If its too high, we are correcting for thermal motion and if two low we omit the acutal inherant undulations. To obtain the optimum we follow the procedure by Braun et al., where we obtain the **spectral intensity** by scanning a relatively large $q-$ space i.e $N>=50$ or so. For membranes, the spectral intesity of actual unduation scales as $q^{-4}$, so we choose the $q_0$ where the behaviour deviates from this scaling. In most case of DOPC and DPPC for both all-atom and martini, the default value i found i.e $q_0 \sim 0.04~Å^{-1}$ works well. To explore the spectral intensity behaviour for different sytems, you can use the provided notebook `obtain_threshold_wave_vector.ipynb`.
 
 <img src="/Figures/dppc_1000_spectrum.png" width="1000"> 
 
