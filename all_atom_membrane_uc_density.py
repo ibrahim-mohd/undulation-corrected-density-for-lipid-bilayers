@@ -33,6 +33,9 @@ parser.add_argument('-N', dest='N', type=int, default= 4, help='number of fourie
 
 parser.add_argument('-skip', dest='skip', type=int, default= 1, help='skip frame by this interval')
 
+parser.add_argument('-b', dest='begin_time', type=int, default= 0, help='Time of first frame to read from trajectory (unit ps)')
+parser.add_argument('-e', dest='end_time', type=int, default= None, help='Time of last frame to read from trajectory (unit ps)')
+
 parser.add_argument('-o', dest='output_filename', type=str, default=None,help='output filename')
 
 parser.add_argument('-group', dest='group', type=str, default='C114',help='atoms to  consider for fourier coefficient calcualtion')
@@ -329,12 +332,22 @@ dz                  = args.dz
 output_filename     = args.output_filename
 group               = args.group
 z_lim               = args.z_lim
+begin_time          = args.begin_time
+end_time            = args.end_time
 dens_type           = args.dens_type
 undulation_correct  = args.undulation_correct
 # load trajectory
 u = mda.Universe(tpr_file, xtc_file)
-    
-D = calculate_density (u, group=group,q0=q0, skip=skip, N=N, M=N, dz=dz, z_lim=z_lim, undulation_correct=undulation_correct,dens_type=dens_type)
+
+begin_frame =   int (begin_time/u.trajectory.dt)
+
+if end_time is None: 
+  end_frame = -1
+else:
+  end_frame   =   int (end_time/u.trajectory.dt)
+
+
+D = calculate_density (u, group=group,q0=q0, skip=skip, N=N, M=N, dz=dz, z_lim=z_lim, undulation_correct=undulation_correct,dens_type=dens_type,begin_frame=begin_frame, end_frame=end_frame)
 
 
 #head_group_resid = u.select_atoms (f"name {head_group_atoms}").resids
