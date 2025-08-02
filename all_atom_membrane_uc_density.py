@@ -202,7 +202,7 @@ def calculate_density (u, group="C114", skip=3, dz=1, begin_frame=0, end_frame=-
     possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
 
     # if your ions is not one fo the listed add here
-    possible_ion_names   = " ".join (x for x in ["NA", "CL", "K","CA", "SOD", "CLA", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"])
+    possible_ion_names   = " ".join (x for x in ["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"])
     #sol_ion_names =  " ".join (x for x in cg_electron_mass ["SOL"].keys())
   
     membrane = u.select_atoms (f"all and not resname {possible_water_names} {possible_ion_names}")
