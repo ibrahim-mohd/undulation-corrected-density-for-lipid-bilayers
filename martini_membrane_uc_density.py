@@ -26,6 +26,8 @@ parser.add_argument('-q0', dest='q0', type=float, default= 0.04, help='filter bo
 parser.add_argument('-N', dest='N', type=int, default= 4, help='number of fourier terms')
 
 parser.add_argument('-skip', dest='skip', type=int, default= 1, help='skip frame by this interval')
+parser.add_argument('-b', dest='begin_time', type=int, default= 0, help='Time of first frame to read from trajectory (unit ps)')
+parser.add_argument('-e', dest='end_time', type=int, default= None, help='Time of last frame to read from trajectory (unit ps)')
 
 parser.add_argument('-o', dest='output_filename', type=str, default=None, help='output filename')
 
@@ -292,14 +294,25 @@ dz                  = args.dz
 output_filename     = args.output_filename
 group               = args.group
 z_lim               = args.z_lim
+begin_time          = args.begin_time
+end_time            = args.end_time
+
 undulation_correct  = args.undulation_correct
 
 u = mda.Universe(tpr_file, xtc_file)
+
+begin_frame =   int (begin_time/u.trajectory.dt)
+if end_time is None: 
+  end_frame = -1
+else:
+  end_frame   =   int (end_time/u.trajectory.dt)
+
+
 # load the json file with mass/electorn/neutron for each bead assigned
 with open(args.electron_mass_json, "r", encoding="utf-8") as f: cg_electron_mass = json.load(f)
 
 
-D = calculate_density (u, group=group,q0=q0, skip=skip, N=N, M=N, dz=dz, z_lim=z_lim, cg_electron_mass=cg_electron_mass,undulation_correct=undulation_correct)
+D = calculate_density (u, group=group,q0=q0, skip=skip, N=N, M=N, dz=dz, z_lim=z_lim, cg_electron_mass=cg_electron_mass,undulation_correct=undulation_correct,begin_frame=begin_frame, end_frame=end_frame)
  
 
 ## write output file
