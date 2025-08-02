@@ -1,5 +1,5 @@
 # 1. Introduction
-The scripts here calculate **Undulation Corrected** transverse **electron density**, **mass density**, or **neutron scattering length density (SLD)** for lipid membranes or lipid membranes with different biomolecules like proteins or nucleic acids. The undulation correction procedure is performed by using the method form Braun et al.
+The scripts here calculate **Undulation Corrected** transverse **electron density**, **mass density**, or **neutron scattering length density (SLD)** for lipid membranes or lipid membranes with different biomolecules like proteins or nucleic acids. The undulation correction procedure is performed by using the method from Braun et al.
 
 *Braun, A.R., Brandt, E.G., Edholm, O., Nagle, J.F. and Sachs, J.N., 2011. Determination of electron density profiles and area from simulations of undulating membranes. Biophysical journal, 100(9), pp.2112-2120*.
 
