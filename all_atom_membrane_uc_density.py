@@ -21,7 +21,7 @@ parser = argparse.ArgumentParser (description="This code calculates transverse m
 
 parser.add_argument('-f', dest='xtc_file', type=str, default='all.xtc',help='xtc file')
 parser.add_argument('-s', dest='tpr_file', type=str, default='em.tpr',help='input tpr file')
-parser.add_argument('-uc', dest='undulation_correct', type=int, default=1, help='if set to 0 no undulation correction is performed')
+parser.add_argument('-uc', dest='undulation_correct', type=int, default=0, help='if set to 1, undulation correction is performed')
 parser.add_argument("-dens", dest="dens_type", type=str, default="electron",
                         choices=["electron", "mass", "neutron"], help="density type can be electron or mass or neutron coherent scattering lengths")
     
