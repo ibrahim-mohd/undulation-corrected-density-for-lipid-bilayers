@@ -355,12 +355,16 @@ undulation_correct  = args.undulation_correct
 # load trajectory
 u = mda.Universe(tpr_file, xtc_file)
 
-begin_frame =   int (begin_time/u.trajectory.dt)
+timestep = u.trajectory.dt
+
+if timestep = 0: timestep # this happens e.g when you obtained the xtc file by combining gro file with no timestep information. in those cases -b and -e flags are the frame numbers instead of time
+
+begin_frame =   int (begin_time/timestep)
 
 if end_time is None: 
   end_frame = -1
 else:
-  end_frame   =   int (end_time/u.trajectory.dt)
+  end_frame   =   int (end_time/timestep)
 
 
 D = calculate_density (u, group=group,q0=q0, skip=skip, N=N, M=N, dz=dz, z_lim=z_lim, undulation_correct=undulation_correct,dens_type=dens_type,begin_frame=begin_frame, end_frame=end_frame)
