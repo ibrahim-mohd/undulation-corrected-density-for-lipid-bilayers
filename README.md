@@ -57,7 +57,7 @@ Figure 2: <em> Spectral intensity for pure DPPC bilayer from CG-Martini simulati
          ``` ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"]```
  
    
-And ions names is one of the following: ```["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"]```
+And ions names is one of the following: ```["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA","Cl-", "Na+","K+", "Li+", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"]```
 
 4. If you get error related to sol/ion resname not found, just add the names of your ion or solvnet to the above list in the script.
 
