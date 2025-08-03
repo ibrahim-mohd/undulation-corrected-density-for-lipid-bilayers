@@ -166,7 +166,6 @@ def get_atom_properties (u, dens_type="electron"):
     # for the non-hydrogen and non-oxygen atoms we just set thier contribution to 0
     # may be distributing the total electron to the extra dummy atoms is more accurate thatn assinging to the hydrogne and oxygen
     # But i think, it sould not make much of a difference
-    possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
     sol_atom_names  = np.unique (u.select_atoms (f"resname {possible_water_names}").names)
   
     for name in sol_atom_names: 
@@ -216,14 +215,6 @@ def calculate_density (u, group="C114", skip=3, dz=1, begin_frame=0, end_frame=-
     Vol_sol = 0
     Vol_lip = 0
     
-    # If your water has some other name outside those listed below add that here
-    
-    possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
-
-    # if your ions is not one fo the listed add here
-    possible_ion_names   = " ".join (x for x in ["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA","Cl-", "Na+","K+", "Li+", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"])
-    #sol_ion_names =  " ".join (x for x in cg_electron_mass ["SOL"].keys())
-  
     membrane = u.select_atoms (f"all and not resname {possible_water_names} {possible_ion_names}")
     z_com = membrane.center_of_mass () [2]
 
@@ -352,6 +343,13 @@ begin_time          = args.begin_time
 end_time            = args.end_time
 dens_type           = args.dens_type
 undulation_correct  = args.undulation_correct
+
+# If your water has some other name outside those listed below add that here
+# if your ions is not one fo the listed add here
+possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
+possible_ion_names   = " ".join (x for x in ["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA","Cl-", "Na+","K+", "Li+", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"])
+
+
 # load trajectory
 u = mda.Universe(tpr_file, xtc_file)
 
@@ -365,7 +363,6 @@ if end_time is None:
   end_frame = -1
 else:
   end_frame   =   int (end_time/timestep)
-
 
 D = calculate_density (u, group=group,q0=q0, skip=skip, N=N, M=N, dz=dz, z_lim=z_lim, undulation_correct=undulation_correct,dens_type=dens_type,begin_frame=begin_frame, end_frame=end_frame)
 
