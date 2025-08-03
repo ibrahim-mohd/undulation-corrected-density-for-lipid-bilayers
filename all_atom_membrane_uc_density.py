@@ -344,8 +344,7 @@ end_time            = args.end_time
 dens_type           = args.dens_type
 undulation_correct  = args.undulation_correct
 
-# If your water has some other name outside those listed below add that here
-# if your ions is not one fo the listed add here
+# Define possible water and ions residuenames: If your water and ions residue name are not listed below just add them to the list below
 possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
 possible_ion_names   = " ".join (x for x in ["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA","Cl-", "Na+","K+", "Li+", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"])
 
