@@ -167,7 +167,7 @@ def get_atom_properties (u, dens_type="electron"):
     # may be distributing the total electron to the extra dummy atoms is more accurate thatn assinging to the hydrogne and oxygen
     # But i think, it sould not make much of a difference
     possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
-    sol_atom_names  = np.unique (u.select_atoms (f"resname {possible_water_names}"))
+    sol_atom_names  = np.unique (u.select_atoms (f"resname {possible_water_names}").names)
   
     for name in sol_atom_names: 
       if name[0] not in ["H", "O"]: atom_properties [name] =0
