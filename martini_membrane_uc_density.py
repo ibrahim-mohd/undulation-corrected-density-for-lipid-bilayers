@@ -301,11 +301,16 @@ undulation_correct  = args.undulation_correct
 
 u = mda.Universe(tpr_file, xtc_file)
 
-begin_frame =   int (begin_time/u.trajectory.dt)
+timestep = u.trajectory.dt
+
+if timestep == 0: timestep =1 # this happens e.g when you obtained the xtc file by combining gro file with no timestep information. in those cases -b and -e flags are the frame numbers instead of time
+
+begin_frame =   int (begin_time/timestep)
+
 if end_time is None: 
   end_frame = -1
 else:
-  end_frame   =   int (end_time/u.trajectory.dt)
+  end_frame   =   int (end_time/timestep)
 
 
 # load the json file with mass/electorn/neutron for each bead assigned
