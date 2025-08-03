@@ -166,6 +166,7 @@ def get_atom_properties (u, dens_type="electron"):
     # for the non-hydrogen and non-oxygen atoms we just set thier contribution to 0
     # may be distributing the total electron to the extra dummy atoms is more accurate thatn assinging to the hydrogne and oxygen
     # But i think, it sould not make much of a difference
+  
     sol_atom_names  = np.unique (u.select_atoms (f"resname {possible_water_names}").names)
   
     for name in sol_atom_names: 
@@ -175,7 +176,7 @@ def get_atom_properties (u, dens_type="electron"):
   
     for name in np.unique (u.atoms.names):
         
-        if name in atom_properties.keys(): continue # incase it a name for some atoms of solvent was assigned before
+        if name in atom_properties.keys(): continue # incase it is a name for some atoms of solvent that was assigned before
           
         # Defautl element type in MDAnalysis does not work in some cases
         guessed_element = guess_atom_element(name)
@@ -210,7 +211,6 @@ def calculate_density (u, group="C114", skip=3, dz=1, begin_frame=0, end_frame=-
     
     Density [:,0] = np.linspace (0, boxz,  len(Density))
     
-     
      
     Vol_sol = 0
     Vol_lip = 0
