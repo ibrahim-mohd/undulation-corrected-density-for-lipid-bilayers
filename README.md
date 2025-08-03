@@ -58,6 +58,7 @@ Figure 2: <em> Spectral intensity for pure DPPC bilayer from CG-Martini simulati
  
    
 And ions names is one of the following: ```["NA", "CL", "K","CA", "SOD","POT","CAL", "CLA", "MG", "NIO", "CXY", "CIO", "LIO", "KIO", "mMg", "nMg"]```
+
 4. If you get error related to sol/ion resname not found, just add the names of your ion or solvnet to the above list in the script.
 
 # 5. References
