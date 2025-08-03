@@ -53,7 +53,7 @@ For the undulation correction choosing proper $q_0$ is critcal. If its too high,
 Figure 2: <em> Spectral intensity for pure DPPC bilayer from CG-Martini simulations with 1000 lipids/monolayer. At low frequency, the undulations scale as $q^{-4}$, these corresponds to actual undulations regimes. At high-$q$, the intensity starts increaing again, this regime has to be filtered out. (A) without filter (B) after applying filter from Braun et al. Here we used two different atom groups PO4 and C3A to calculate the undulation reference surface</em>
 # Remarks
 1. The density calculation output has always 4 columns: (i) z-distance (ii) Total density profile (iii) All not solvent and ions i.e, (lipids + else) and (iv) solvent + ions.
-2. You do not need to specify the solvent: For all-atom systems the code assumes your solvent has one of the residue names taken from MDAnalysis documentation:
+2. You do not need to specify the solvent: For all-atom systems the code assumes your solvent has one of the following residue names, taken from MDAnalysis documentation:
          ``` ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"]```
  
    
