@@ -160,8 +160,24 @@ def get_atom_properties (u, dens_type="electron"):
     ## assign mass, number of electron or neutron scattering length to each atom types
     
     atom_properties = {}
-    
+   
+    #  
+    #For just incase if the water model is other than 3 Point water model
+    # for the non-hydrogen and non-oxygen atoms we just set thier contribution to 0
+    # may be distributing the total electron to the extra dummy atoms is more accurate thatn assinging to the hydrogne and oxygen
+    # But i think, it sould not make much of a difference
+    possible_water_names = " ".join (x for x in ["H2O", "HOH", "OH2", "HHO", "OHH", "TIP", "T3P", "T4P", "T5P", "SOL", "WAT", "TIP2", "TIP3", "TIP4"])
+    sol_atom_names  = np.unique (u.select_atoms (f"resname {possible_water_names}"))
+  
+    for name in sol_atom_names: 
+      if name[0] not in ["H", "O"]: atom_properties [name] =0
+  
+    ### Assign the rest
+  
     for name in np.unique (u.atoms.names):
+        
+        if name in atom_properties.keys(): continue # incase it a name for some atoms of solvent was assigned before
+          
         # Defautl element type in MDAnalysis does not work in some cases
         guessed_element = guess_atom_element(name)
         # for input to pt package make the first letter uppercase and second lowercase
@@ -173,9 +189,9 @@ def get_atom_properties (u, dens_type="electron"):
             value = getattr(pt.elements.symbol(guessed_element), dens_type)
         ## 
         if dens_type == "neutron": value = value.b_c
-        
-        
+      
         atom_properties [name] = value
+      
         
     return atom_properties
     
