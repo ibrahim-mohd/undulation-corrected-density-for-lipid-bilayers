@@ -357,7 +357,7 @@ u = mda.Universe(tpr_file, xtc_file)
 
 timestep = u.trajectory.dt
 
-if timestep = 0: timestep # this happens e.g when you obtained the xtc file by combining gro file with no timestep information. in those cases -b and -e flags are the frame numbers instead of time
+if timestep = 0: timestep =1 # this happens e.g when you obtained the xtc file by combining gro file with no timestep information. in those cases -b and -e flags are the frame numbers instead of time
 
 begin_frame =   int (begin_time/timestep)
 
