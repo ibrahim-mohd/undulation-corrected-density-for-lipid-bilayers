@@ -62,5 +62,6 @@ And ions names is one of the following: ```["NA", "CL", "K","CA", "SOD","POT","C
 4. If you get error related to sol/ion resname not found, just add the names of your ion or solvnet to the above list in the script.
 
 # 5. References
-If you find this thing useful please cite our work: coming soon...
-...
+If you find this thing useful please cite our work: 
+
+Mohd Ibrahim, Jürgen Kofinger, Martin Zacharias, Emanuel Schneck, and Nadine Schwierz "RNA at lipid/water interfaces: Probing interactions and structures" (*In preparation*)
