@@ -120,7 +120,7 @@ def parse_mapping_file(mapping_lines: list[str], dens_type: str) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Assign electron/mass/neutron scattering factors to Martini beads by reading mapping file"
+        description="Assign electron/mass/neutron scattering factors to Martini beads. The inputs required are the martini Mapping files directory and the .gro or .pbd file"
     )
     parser.add_argument("-m", dest="mapping_file_path", type=str, default="./Mapping",
                         help="Martini mapping file directory")
