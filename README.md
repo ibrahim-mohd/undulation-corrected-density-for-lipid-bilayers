@@ -50,7 +50,8 @@ For the undulation correction choosing proper $q_0$ is critcal. If its too high,
 
 <img src="/Figures/dppc_1000_spectrum.png" width="1000"> 
 
-Figure 2: <em> Undulation spectra for pure DPPC bilayer from CG-Martini simulations with 1000 lipids/monolayer. At low frequency, the undulations scale as $q^{-4}$, these corresponds to actual undulations regimes. At high-$q$, the intensity starts increaing again, this regime has to be filtered out. (A) without filter (B) after applying filter from Braun et al. Here we used two different atom groups PO4 and C3A to calculate the undulation reference surface</em>
+Figure 2: <em> Undulation spectra for pure DPPC bilayer from CG-Martini simulations with 1000 lipids/monolayer. At low frequency, the undulations scale as $q^{-4}$, these corresponds to actual undulations regimes. At high-$q$, the intensity starts increaing again, this regime has to be filtered out. (A) without filter (B) after applying filter from Braun et al. Here we used two different atom groups PO4 and C3A to calculate the undulation reference surface. Refer to [this article](https://www.cell.com/biophysj/fulltext/S0006-3495(11)00320-1) for interpretation of the plot and to identify the undulation regime.
+</em>
 
 # Remarks
 1. The density calculation output has always 4 columns: (i) z-distance (ii) Total density profile (iii) All not solvent and ions i.e, (lipids + else) and (iv) solvent + ions.
