@@ -9,7 +9,7 @@ The scripts here calculate **Undulation Corrected** transverse **electron densit
 
 &nbsp;&nbsp;&nbsp;&nbsp;2. For Martini systems, obtaining electron/mass density or neutron SLD profile calculation is non-trivial. First, one needs to assign the number of electrons to each bead. However, even after doing so, using tools like `gmx density` is not feasible since a given bead maps to a different number of electrons depending on the residue (i.e., lipid type, nucleotide, or amino acid).  
 
-&nbsp;&nbsp;&nbsp;&nbsp;3. When simulating large membrane patches (>500 lipids per monolayer), the inherent undulations smear out the transverse density profiles. To make direct comparisons with experiments, those undulations need to be corrected.  
+&nbsp;&nbsp;&nbsp;&nbsp;3. When simulating large membrane patches (>300 lipids per monolayer), the inherent undulations smear out the transverse density profiles. To make direct comparisons with experiments, those undulations need to be corrected.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;4. The scripts here take care of all the above for both **CG‑Martini** and **All‑atom** lipid bilayer systems, with and without other biomolecules.  
 ## 1.2 Dependencies
