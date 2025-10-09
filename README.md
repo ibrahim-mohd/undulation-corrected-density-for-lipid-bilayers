@@ -20,7 +20,7 @@ There are two scripts that need to be run one after the other:
 1. **Assign electron/mass/neutron** to Martini beads using  `martini_bead_electron_mass_assigner.py`.
 
 ```bash
-python martini_bead_electron_mass_assigner.py -m ./Mapping -c gro_file -o cg_bead_prop.json -dens electron
+python 01_martini_bead_electron_mass_assigner.py -m ./Mapping -c $gro_file -o cg_bead_prop.json -dens electron
 ```
 
 The `Mapping` directory is part of this repository obtained from the Martini website (backward tutorial zip file). ```-dens``` can be ``electron``, ``mass`` or ``neutron``
@@ -28,7 +28,7 @@ The `Mapping` directory is part of this repository obtained from the Martini web
 
 2. Obtain **undulation corrected/regular density** using `martini_membrane_uc_density.py`
 ```bash
-python martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_electron.json -uc 1 -o output_file -q0 0.04 -N 4 -group "C3A"
+python 02_martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_bead_prop.json -uc 1 -o output_file -q0 0.04 -N 4 -group "C3A"
 ```
   The number of Fourier terms (-N), wave vector threshold (-q0), Group (-group) to consider for udulating reference surface is set to default values.
 
