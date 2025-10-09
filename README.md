@@ -17,7 +17,7 @@ MDAnalysis (v-2.9.0), periodictable (v-2.0.2). Other version  should work as wel
 # 2. Martini Coarse-grained Membrane Simulations: undulation corrected density
 There are two scripts that need to be run one after the other:  
 
-1. **Assign electron/mass/neutron** to Martini beads using  `martini_bead_electron_mass_assigner.py`.
+1. **Assign electron/mass/neutron** to Martini beads using  `01_martini_bead_electron_mass_assigner.py`.
 
 ```bash
 python 01_martini_bead_electron_mass_assigner.py -m ./Mapping -c $gro_file -o cg_bead_prop.json -dens electron
@@ -26,7 +26,7 @@ python 01_martini_bead_electron_mass_assigner.py -m ./Mapping -c $gro_file -o cg
 The `Mapping` directory is part of this repository obtained from the Martini website (backward tutorial zip file). ```-dens``` can be ``electron``, ``mass`` or ``neutron``
  
 
-2. Obtain **undulation corrected/regular density** using `martini_membrane_uc_density.py`
+2. Obtain **undulation corrected/regular density** using `02_martini_membrane_uc_density.py`
 ```bash
 python 02_martini_membrane_uc_density.py -f mol.xtc -s npt.tpr -j cg_bead_prop.json -uc 1 -o output_file -q0 0.04 -N 4 -group "C3A"
 ```
