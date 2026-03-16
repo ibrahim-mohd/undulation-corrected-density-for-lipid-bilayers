@@ -66,4 +66,4 @@ And ions names is one of the following: ```["NA", "CL", "K","CA", "SOD","POT","C
 # 5. References
 If you find this thing useful please cite our work: 
 
-Mohd Ibrahim, Jürgen Kofinger, Martin Zacharias, Emanuel Schneck, and Nadine Schwierz "[RNA at Lipid/Water Interfaces: Molecular Insights from Coarse-Grained Simulations and Reflectivity Data Predictions](https://www.biorxiv.org/content/10.1101/2025.11.21.689668v1)"
+Mohd Ibrahim, Jürgen Kofinger, Martin Zacharias, Emanuel Schneck, and Nadine Schwierz "[RNA at Lipid/Water Interfaces: Molecular Insights from Coarse-Grained Simulations and Reflectivity Data Predictions](https://pubs.acs.org/doi/10.1021/acs.langmuir.5c06275)"
