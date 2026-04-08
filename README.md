@@ -1,3 +1,5 @@
+[![Langmuir Paper](https://img.shields.io/badge/Journal-Langmuir-ffcc00?style=flat&logo=acs&logoColor=white&labelColor=2e3d53)](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5c06275)
+
 # 1. Introduction
 The scripts here calculate **Undulation Corrected** transverse **electron density**, **mass density**, or **neutron scattering length density (SLD)** for lipid membranes or lipid membranes with different biomolecules like proteins or nucleic acids. The undulation correction procedure is performed by using the method from Braun et al.
 
